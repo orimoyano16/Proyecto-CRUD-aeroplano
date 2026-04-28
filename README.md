@@ -17,3 +17,7 @@ Para cumplir con la regla, vamos a hacer que Alas y Cubierta sean Composición, 
 
 
 <img width="906" height="545" alt="image" src="https://github.com/user-attachments/assets/31bdfad8-e873-4000-b99f-64f74a998c2c" />
+
+
+Estructura del proyecto 
+<img width="287" height="399" alt="image" src="https://github.com/user-attachments/assets/30c19cf7-77d4-4405-8c8b-2f80d5872e4c" />
