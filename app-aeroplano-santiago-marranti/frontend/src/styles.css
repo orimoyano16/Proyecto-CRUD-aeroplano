@@ -1,0 +1,7 @@
+/* Estilos globales basicos para no depender del navegador */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+}

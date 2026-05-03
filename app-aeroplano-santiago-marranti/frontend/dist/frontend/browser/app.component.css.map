@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;536708be1e29791722ce1cf527232abbf22568cfe74d153b836ccfb32c416808;C:/Carpetas/Carreras Facultad de Informatica/T. Programador Full Stack/Programaci\u00F3n Orientada a Objetos/POO/Aeroplano II/frontend/src/app/app.component.ts"],
+  "sourcesContent": ["\n      :host {\n        display: block;\n        font-family: Arial, sans-serif;\n        padding: 2rem;\n      }\n\n      button {\n        padding: 0.7rem 1rem;\n        cursor: pointer;\n      }\n\n      p {\n        margin-top: 1rem;\n        background: #e9ffe9;\n        border: 1px solid #79c979;\n        padding: 0.8rem;\n        border-radius: 8px;\n      }\n    "],
+  "mappings": ";AACM;AACE,WAAS;AACT,eAAa,KAAK,EAAE;AACpB,WAAS;AACX;AAEA;AACE,WAAS,OAAO;AAChB,UAAQ;AACV;AAEA;AACE,cAAY;AACZ,cAAY;AACZ,UAAQ,IAAI,MAAM;AAClB,WAAS;AACT,iBAAe;AACjB;",
+  "names": []
+}

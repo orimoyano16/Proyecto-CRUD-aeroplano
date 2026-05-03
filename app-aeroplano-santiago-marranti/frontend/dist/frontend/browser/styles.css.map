@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.css"],
+  "sourcesContent": ["/* Estilos globales basicos para no depender del navegador */\r\nhtml,\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: #f7f7f7;\r\n}\r\n"],
+  "mappings": ";AACA;AACA;AACE,UAAQ;AACR,WAAS;AACT,cAAY;AACd;",
+  "names": []
+}
