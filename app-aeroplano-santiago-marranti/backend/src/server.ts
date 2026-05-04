@@ -19,20 +19,13 @@ app.use(
 // Middleware para JSON
 app.use(express.json());
 
-// Endpoint GET
-app.get("/api/saludo", (req: Request, res: Response) => {
-  res.json({
-    mensaje: "Hola desde el backend. Conexion exitosa."
-  });
-});
-
 // Endpoint POST (agregar un aeroplano)
 app.post("/api/aeroplanos/crearAeroplano",
   (req: Request, res: Response) => {
 
     const {
       //Aeroplano
-      marca, modelo, año,
+      marca, modelo, anio,
       //Alas
       cantAlasFrente, cantAlasCola,
       //Tren de aterrizaje
@@ -51,7 +44,7 @@ app.post("/api/aeroplanos/crearAeroplano",
     const helices = new aeroplano.Helice(numHelices);
     const turbinas = new aeroplano.Turbina(numTurbinas);
 
-    const aero = new aeroplano.Aeroplano(marca, modelo, año, helices, trenAterrizaje, alas, cubierta, turbinas);
+    const aero = new aeroplano.Aeroplano(marca, modelo, anio, helices, trenAterrizaje, alas, cubierta, turbinas);
 
     BD_AEROPLANOS.push({ id: idCounter, aeroplano: aero });
     idCounter++;
@@ -66,7 +59,7 @@ app.post("/api/aeroplanos/crearAeroplano",
 app.get("/api/aeroplanos/obtenerAeroplanos",
   (req: Request, res: Response) => {
     res.status(200).json({
-      aeroplanos: BD_AEROPLANOS.toString()
+      aeroplanos: BD_AEROPLANOS
     });
   }
 );
@@ -100,7 +93,7 @@ app.put("/api/aeroplanos/actualizarAeroplano/:ID",
     if (aeroplano_selected != undefined) {
       const {
         //Aeroplano
-        marca, modelo, año,
+        marca, modelo, anio,
         //Alas
         cantAlasFrente, cantAlasCola,
         //Tren de aterrizaje
@@ -119,7 +112,7 @@ app.put("/api/aeroplanos/actualizarAeroplano/:ID",
       const helices = new aeroplano.Helice(numHelices);
       const turbinas = new aeroplano.Turbina(numTurbinas);
 
-      aeroplano_selected.aeroplano = new aeroplano.Aeroplano(marca, modelo, año, helices, trenAterrizaje, alas, cubierta, turbinas);
+      aeroplano_selected.aeroplano = new aeroplano.Aeroplano(marca, modelo, anio, helices, trenAterrizaje, alas, cubierta, turbinas);
 
       res.status(200).json({
         mensaje: "Aeroplano actualizado correctamente."

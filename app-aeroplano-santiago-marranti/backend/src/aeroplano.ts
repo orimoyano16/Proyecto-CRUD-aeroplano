@@ -95,9 +95,12 @@ class Aeroplano {
     //Esto se lo agrego como un plus
     private marca: string;
     private modelo: string;
-    private año: number;
+    private anio: number;
 
-    constructor(marca: string, modelo: string, año: number, phelice: Helice, pTrenAterrizaje: TrendeAterrizaje, pAlas: Alas, pCubierta: Cubierta, pTurbina: Turbina) {
+    constructor(marca: string, modelo: string, anio: number,
+        phelice: Helice, pTrenAterrizaje: TrendeAterrizaje,
+        pAlas: Alas, pCubierta: Cubierta, pTurbina: Turbina) {
+
         this.helice = phelice;
         this.trenAterrizaje = pTrenAterrizaje;
         this.alas = pAlas;
@@ -107,7 +110,7 @@ class Aeroplano {
         //Esto se lo agrego como un plus
         this.marca = marca;
         this.modelo = modelo;
-        this.año = año;
+        this.anio = anio;
     }
 
     public ToString() {
