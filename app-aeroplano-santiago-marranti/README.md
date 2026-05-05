@@ -10,7 +10,7 @@ Este repositorio es una aplicación **Full Stack** (Frontend + Backend) diseñad
 
 ## ✨ Características Implementadas
 
-1. **Modelo de Dominio (POO)**: Implementación estricta de clases mediante Composición. El Aeroplano requiere obligatoriamente de sus componentes para existir.
+1. **Modelo de Dominio (POO)**: Implementación estricta de relaciones de **Agregación** y **Composición**. Se demuestra la Agregación inyectando componentes externos (Tren de Aterrizaje, Cubierta, Turbina), y la Composición instanciando partes directamente ligadas al ciclo de vida del Aeroplano (Hélices, Alas).
 2. **REST API Completa**: Endpoints implementados en Express (`GET`, `POST`, `PUT`, `DELETE`) operando sobre una base de datos en memoria.
 3. **Interfaz Premium (UI/UX)**: Interfaz diseñada desde cero utilizando CSS puro, implementando:
    - Modo oscuro (Dark Mode).
