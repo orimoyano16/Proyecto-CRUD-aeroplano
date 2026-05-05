@@ -19,6 +19,12 @@ Este repositorio es una aplicación **Full Stack** (Frontend + Backend) diseñad
    - Animaciones y transiciones dinámicas.
 4. **Formulario Reactivo**: Formularios anidados en Angular capaces de construir la estructura compleja del Aeroplano para enviarla transparente al Backend.
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
 ## 🚀 ¿Cómo arrancar el proyecto?
 
 La manera más fácil y rápida de correr toda la aplicación (tanto el cliente como el servidor) es utilizando **Docker**.

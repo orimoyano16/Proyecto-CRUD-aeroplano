@@ -38,13 +38,15 @@ app.post("/api/aeroplanos/crearAeroplano",
       numTurbinas
     } = req.body;
 
-    const alas = new aeroplano.Alas(cantAlasFrente, cantAlasCola);
     const trenAterrizaje = new aeroplano.TrendeAterrizaje(numNeumaticos, numAmortiguadores, fijoRetractil);
     const cubierta = new aeroplano.Cubierta(cabinaTripulacion, cabinaVuelo, sistemaEmergencia, numTanquesCombustible, numPuertasSalidas);
-    const helices = new aeroplano.Helice(numHelices);
     const turbinas = new aeroplano.Turbina(numTurbinas);
 
-    const aero = new aeroplano.Aeroplano(marca, modelo, anio, helices, trenAterrizaje, alas, cubierta, turbinas);
+    /**
+     * Agrego numHelices, cantAlasFrente y cantAlasCola como parametros para instanciar la clase
+     * que corresponde a estos datos dentro (COMPOSICIÓN).
+     */
+    const aero = new aeroplano.Aeroplano(marca, modelo, anio, numHelices, trenAterrizaje, cantAlasFrente, cantAlasCola, cubierta, turbinas);
 
     BD_AEROPLANOS.push({ id: idCounter, aeroplano: aero });
     idCounter++;
@@ -106,13 +108,15 @@ app.put("/api/aeroplanos/actualizarAeroplano/:ID",
         numTurbinas
       } = req.body;
 
-      const alas = new aeroplano.Alas(cantAlasFrente, cantAlasCola);
       const trenAterrizaje = new aeroplano.TrendeAterrizaje(numNeumaticos, numAmortiguadores, fijoRetractil);
       const cubierta = new aeroplano.Cubierta(cabinaTripulacion, cabinaVuelo, sistemaEmergencia, numTanquesCombustible, numPuertasSalidas);
-      const helices = new aeroplano.Helice(numHelices);
       const turbinas = new aeroplano.Turbina(numTurbinas);
 
-      aeroplano_selected.aeroplano = new aeroplano.Aeroplano(marca, modelo, anio, helices, trenAterrizaje, alas, cubierta, turbinas);
+      /**
+       * Agrego numHelices, cantAlasFrente y cantAlasCola como parametros para instanciar la clase
+       * que corresponde a estos datos dentro (COMPOSICIÓN).
+      */
+      aeroplano_selected.aeroplano = new aeroplano.Aeroplano(marca, modelo, anio, numHelices, trenAterrizaje, cantAlasFrente, cantAlasCola, cubierta, turbinas);
 
       res.status(200).json({
         mensaje: "Aeroplano actualizado correctamente."

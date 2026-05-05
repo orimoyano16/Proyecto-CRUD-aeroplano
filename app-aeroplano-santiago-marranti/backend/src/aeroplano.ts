@@ -98,14 +98,18 @@ class Aeroplano {
     private anio: number;
 
     constructor(marca: string, modelo: string, anio: number,
-        phelice: Helice, pTrenAterrizaje: TrendeAterrizaje,
-        pAlas: Alas, pCubierta: Cubierta, pTurbina: Turbina) {
+        cantidadHelices: number, pTrenAterrizaje: TrendeAterrizaje,
+        cantidadAlasFrente: number, cantidadAlasCola: number,
+        pCubierta: Cubierta, pTurbina: Turbina) {
 
-        this.helice = phelice;
+        //Agregación 
         this.trenAterrizaje = pTrenAterrizaje;
-        this.alas = pAlas;
         this.cubierta = pCubierta;
-        this.turbina = pTurbina
+        this.turbina = pTurbina;
+
+        //Composición
+        this.helice = new Helice(cantidadHelices);
+        this.alas = new Alas(cantidadAlasFrente, cantidadAlasCola);
 
         //Esto se lo agrego como un plus
         this.marca = marca;
